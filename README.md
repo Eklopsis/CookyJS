@@ -49,13 +49,13 @@ Vous pouvez executer ceci sur un cookie déjà généré avec `$.cookie.push()` 
 $.cookie.push([key], [value]);
 ```
 #### Pour modifier la valeur d'un tableau dans un cookie
-Dans ce cas, `[search]` est la valeur à rechercher dans le cookir `[key]` et `[newvalue]` la nouvelle valeur
+Dans ce cas, `[search]` est la valeur à rechercher dans le cookir `[key]` et `[newvalue]` la nouvelle valeur<br>
 Attention, ça remplacera toutes les occurences
 ```javascript
 $.cookie.push.edit([key], [search], [newvalue]);
 ```
 #### Pour supprimer une valeur d'un tableau dans un cookie
-Dans ce cas, `[value]` est la valeur à supprimer dans le cookie `[key]`
+Dans ce cas, `[value]` est la valeur à supprimer dans le cookie `[key]`<br>
 Attention, ça supprimera toutes les occurences
 ```javascript
 $.cookie.push.remove([key], [value]);
