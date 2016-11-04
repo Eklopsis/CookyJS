@@ -115,13 +115,13 @@ $(function($) {
       }
     }
 
-    newvalue = pe_c_f_cookie.join(',');
+    newvalue = pe_c_f_cookie.join(',').replace(/,,/g, '');
 
     $.cookie.edit(key, newvalue);
   }
 
   // Cookie array remove value
   $.cookie.push.remove = function(key, search) {
-
+    $.cookie.push.edit(key, search, '');
   }
 });
