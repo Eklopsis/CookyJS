@@ -32,6 +32,8 @@ $(function($) {
     ].join('');
 
     document.cookie = key + '=' + value + c_settings;
+
+    return this;
   }
 
   // Read cookie
@@ -46,17 +48,21 @@ $(function($) {
       }
     }
 
-    return '';
+    return this;
   }
 
   // Replace cookie
   $.cookie.edit = function(key, value) {
     $.cookie.create(key, value);
+
+    return this;
   }
 
   // Remove cookie
   $.cookie.remove = function(key) {
     document.cookie = key + '=;expires=Thu, 01-Jan-70 00:00:01 GMT';
+
+    return this;
   }
 
   // Create array or edit cookie
@@ -94,6 +100,8 @@ $(function($) {
         $.cookie.create(key, value, p_settings);
       }
     }
+
+    return this;
   }
 
   // Cookie array edit value
@@ -118,10 +126,14 @@ $(function($) {
     newvalue = pe_c_f_cookie.join(',').replace(/,,/g, '');
 
     $.cookie.edit(key, newvalue);
+
+    return this;
   }
 
   // Cookie array remove value
   $.cookie.push.remove = function(key, search) {
     $.cookie.push.edit(key, search, '');
+
+    return this;
   }
 });
